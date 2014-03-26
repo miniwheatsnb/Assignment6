@@ -20,8 +20,6 @@ namespace MvcPet.Models
 
         public int Quantity { get; set; }
 
-        [Range(1, 1000000)]
-        [DataType(DataType.Currency)]
         public decimal Price { get; set; }
         public string Picture { get; set; }
     }

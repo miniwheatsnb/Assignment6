@@ -21,9 +21,10 @@ namespace MvcPet.Utilities
                 inventoryList.Add(new Inventory
                 {
                     ID = pet.ID,
-                    Description = DescriptionModifier(pet.Description),
+                    Description = pet.Description,
                     Name = pet.Name,
                     Picture = pet.Picture,
+                    Price = pet.Price,
 
                     
                 });
@@ -43,6 +44,7 @@ namespace MvcPet.Utilities
                     Description = pet.Description,
                     Name = pet.Name,
                     Picture = pet.Picture,
+                    Price = pet.Price,
                 });
             }
 
@@ -55,15 +57,6 @@ namespace MvcPet.Utilities
 
             inv = inventoryList.Find(x=>x.ID == id);
             return inv;
-        }
-
-        public string DescriptionModifier(string origDesc)
-        {
-            string modifiedDesc;
-
-            modifiedDesc = origDesc.Substring(0, 35) + "...";
-
-            return modifiedDesc;
         }
     }
 }
